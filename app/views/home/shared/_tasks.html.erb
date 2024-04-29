@@ -1,0 +1,30 @@
+<div class="card tasks-card">
+  <div class="card-header">
+    <div class="row">
+      <!-- User Icons -->
+      <div class="col-md-12">
+        <div class="d-inline-block position-relative">
+            <img class="user-icon" src="https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/man-user-circle-icon.png" alt="User 1" data-name="User 1">
+            <img class="user-icon" src="https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/man-user-circle-icon.png" alt="User 2" data-name="User 2" style="margin-left: -35px;">
+            <img class="user-icon" src="https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/man-user-circle-icon.png" alt="User 3" data-name="User 3" style="margin-left: -35px;">
+        </div>
+        <button class="btn dropdown-toggle btn-transparent" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= image_tag('three-dots.png', class:"user-icon-task-row", alt:"User 1", 'data-name': "User 1") %>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">
+            <img class="user-icon-task-row" src="https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/man-user-circle-icon.png" alt="User 1" data-name="User 1">
+            Vladyslav Todorchuk
+            </a>
+        </div> 
+        </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <ul class="list-group list-group-flush">
+        <% 100.times do %>
+        <%= render('home/shared/task_row') %>
+        <% end %>
+    </ul>
+  </div>
+</div>
